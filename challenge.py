@@ -13,18 +13,9 @@ def open_the_website(url):
     browser_lib.open_available_browser(url)
 
 
-def search_for(term):
-    input_field = "css:input"
-    
-    all_money = browser_lib.find_elements("xpath://span[@class=' h1 w900']")
-    print(all_money)
-
 def remove_blank_spaces(ls):
     return [i for i in ls if i]
 
-#Create excel file and save it
-def store_file(filename):
-    return None
 
 #Gets the Agency name from the file and then returns it
 def recieve_agency_name():
@@ -39,7 +30,7 @@ def write_to_excel_sheet(department_dict,filename="file"):
     #df.head()
     
     #print (df)
-    df.to_excel(f"{filename}.xlsx")
+    df.to_excel(f"output/{filename}.xlsx")
 # Define a main() function that calls the other functions in order:
 
 def convert_elements_to_text(ls):
@@ -134,7 +125,7 @@ def main():
         )
 
         #print(new_excel_sheet)
-        new_excel_sheet.to_excel("individual_investments.xlsx")
+        new_excel_sheet.to_excel("output/individual_investments.xlsx")
 
 
 
