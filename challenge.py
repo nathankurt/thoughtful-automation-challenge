@@ -88,7 +88,7 @@ def main():
         browser_lib.go_to(agency_location[agency])
         
         #Temporary, would add a browser implicit wait in the future. 
-        sleep(10)
+        sleep(5)
 
         #Dynamic Waiting wasn't working for me
         #browser_lib.wait_until_location_contains('//*[@id="block-itdb-custom--5"]/div/div/div/div[2]/div/div[1]/div',15)
@@ -101,7 +101,7 @@ def main():
         #print(select_list)
         browser_lib.select_from_list_by_value(select_list, "-1")
         #Need to wait 10 seconds to make sure that everything in the table loads after selecting show all entries. 
-        sleep(10)
+        sleep(5)
 
         all_uni = convert_elements_to_text(browser_lib.find_elements('//*["@role=row"]/td[1]'))
         #removing all empty elements from list
