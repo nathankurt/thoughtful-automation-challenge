@@ -29,7 +29,7 @@ def store_file(filename):
 #Gets the Agency name from the file and then returns it
 def recieve_agency_name():
     #Right now this just uses a static name but will add functionality to add more later today. 
-    agency_name = "Department of Agriculture"
+    agency_name = "Small Business Administration"
     return agency_name
 
 def write_to_excel_sheet(department_dict,filename="file"):
@@ -51,6 +51,7 @@ def download_pdfs(list_of_hrefs):
         browser_lib.go_to(i)
         sleep(3)
         browser_lib.click_link("#")
+        sleep(2)
 
 
 
