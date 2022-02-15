@@ -51,7 +51,6 @@ def download_pdfs(list_of_hrefs):
         browser_lib.go_to(i)
         sleep(3)
         browser_lib.click_link("#")
-        sleep(3)
 
 
 
