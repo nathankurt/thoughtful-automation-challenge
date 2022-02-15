@@ -30,7 +30,7 @@ def write_to_excel_sheet(department_dict,filename="file"):
     #df.head()
     
     #print (df)
-    df.to_excel(f"output/{filename}.xlsx")
+    df.to_excel(f"{filename}.xlsx")
 # Define a main() function that calls the other functions in order:
 
 def convert_elements_to_text(ls):
@@ -51,6 +51,7 @@ def download_pdfs(list_of_hrefs):
 def main():
     agency_spending_dict = {}
     try:
+        os.chdir("output")
         open_the_website("https://itdashboard.gov/")
         #dive in button is actually a link so go by href
         browser_lib.click_link("#home-dive-in")
@@ -125,7 +126,7 @@ def main():
         )
 
         #print(new_excel_sheet)
-        new_excel_sheet.to_excel("output/individual_investments.xlsx")
+        new_excel_sheet.to_excel("individual_investments.xlsx")
 
 
 
